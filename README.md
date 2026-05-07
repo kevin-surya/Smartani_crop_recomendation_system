@@ -54,7 +54,7 @@ cd server
 python -m venv .venv
 .\.venv\Scripts\activate
 pip install -r requirements.txt
-uvicorn app:app --reload --port 8000
+uvicorn server.app:app --reload --port 8000
 ```
 
 API berjalan di `http://localhost:8000`.
@@ -80,7 +80,7 @@ cd server
 python -m venv .venv
 .\.venv\Scripts\activate
 pip install -r requirements.txt
-uvicorn app:app --reload --port 8000
+uvicorn server.app:app --reload --port 8000
 ```
 
 4. Jalankan frontend di terminal kedua:
