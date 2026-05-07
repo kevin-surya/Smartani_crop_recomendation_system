@@ -69,6 +69,37 @@ npm run dev
 
 Frontend berjalan di `http://localhost:5173`.
 
+## Cara menggunakan di VS Code
+
+1. Buka folder proyek di VS Code.
+2. Buka dua terminal terpisah (Terminal > New Terminal).
+3. Jalankan backend di terminal pertama:
+
+```bash
+cd server
+python -m venv .venv
+.\.venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn app:app --reload --port 8000
+```
+
+4. Jalankan frontend di terminal kedua:
+
+```bash
+cd ..
+npm install
+npm run dev
+```
+
+5. Buka browser ke `http://localhost:5173`.
+6. Gunakan fitur di halaman utama:
+	- Rekomendasi tanaman: isi form data tanah lalu submit.
+	- Rekomendasi pupuk: isi form data lahan lalu submit.
+	- Deteksi penyakit: unggah foto daun lalu submit.
+	- Chat BoTani: kirim pertanyaan dan lihat jawaban.
+
+Tips: Tekan Ctrl+C di terminal untuk menghentikan backend atau frontend.
+
 ## Model yang dibutuhkan
 
 Letakkan file model di [server/models/](server/models/). Beberapa fitur tidak aktif jika file model tidak tersedia.
